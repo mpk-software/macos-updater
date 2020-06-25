@@ -3,7 +3,7 @@ An shell script for updating macOS and some web development tools (npm, pip, ...
 
 ## Supported applications
 - [macOS](https://support.apple.com/de-de/HT201541) (The operating system itself)
-- [brew](https://github.com/Homebrew) and [brew cask](https://github.com/Homebrew/homebrew-cask)
+- [brew](https://github.com/Homebrew/brew) and [brew cask](https://github.com/Homebrew/homebrew-cask)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [npm](https://github.com/npm/npm) (NodeJS Package Manager)
 - [pip3](https://github.com/pypa/pip) (Python Package Installer)
