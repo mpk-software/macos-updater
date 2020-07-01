@@ -8,5 +8,17 @@ An shell script for updating macOS and some web development tools (npm, pip, ...
 - [npm](https://github.com/npm/npm) (NodeJS Package Manager)
 - [pip3](https://github.com/pypa/pip) (Python Package Installer)
 
+## Installation
+Clone the repository:
+```sh
+git clone https://github.com/mpk-software/macos-updater.git
+cd macos-updater
+```
+
+Run the shell script to start the update process:
+```sh
+./update-macos.sh
+```
+
 ## Contributing
 Please feel free to add additional update commands which are usally used in macOS web development environments by creating a [pull request](https://github.com/mpk-software/macos-updater/pulls).
