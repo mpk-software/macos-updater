@@ -8,7 +8,7 @@ function command_exists {
 if command_exists brew; then
   brew update
   brew upgrade
-  brew cask upgrade --greedy
+  brew upgrade --cask
   brew cleanup -s && rm -rf $(brew --cache)
 fi
 
