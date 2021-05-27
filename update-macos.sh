@@ -12,6 +12,11 @@ if command_exists brew; then
   brew cleanup -s && rm -rf $(brew --cache)
 fi
 
+# Restart the gpg agent because it was probably updated by brew
+if comment_exists gpg; then
+  killall gpg-agent && gpg-agent --daemon
+fi
+
 # Update Oh-My-Zsh
 OHMYZSH_UPDATE_SCRIPT="$ZSH/tools/upgrade.sh"
 if [ -f "$OHMYZSH_UPDATE_SCRIPT" ]; then
