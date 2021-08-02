@@ -13,7 +13,7 @@ if command_exists brew; then
 fi
 
 # Restart the gpg agent because it was probably updated by brew
-if comment_exists gpg; then
+if command_exists gpg; then
   killall gpg-agent && gpg-agent --daemon
 fi
 
