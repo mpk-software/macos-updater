@@ -12,9 +12,12 @@ if command_exists brew; then
   brew cleanup -s && rm -rf $(brew --cache)
 fi
 
-# Restart the gpg agent because it was probably updated by brew
 if command_exists gpg; then
-  gpgconf --kill gpg-agent
+  # Restart the gpg agent because it was probably updated by brew
+  killall gpg-agent && gpg-agent --daemon --pinentry-program /usr/local/bin/pinentry
+
+  # Force asking for the gpg private key's password
+  echo "" | gpg --clearsign
 fi
 
 # Update Oh-My-Zsh
