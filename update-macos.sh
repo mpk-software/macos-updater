@@ -14,7 +14,7 @@ fi
 
 # Restart the gpg agent because it was probably updated by brew
 if command_exists gpg; then
-  killall gpg-agent && gpg-agent --daemon
+  gpgconf --kill gpg-agent
 fi
 
 # Update Oh-My-Zsh
