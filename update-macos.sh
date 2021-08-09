@@ -14,10 +14,7 @@ fi
 
 if command_exists gpg; then
   # Restart the gpg agent because it was probably updated by brew
-  killall gpg-agent && gpg-agent --daemon --pinentry-program /usr/local/bin/pinentry
-
-  # Force asking for the gpg private key's password
-  echo "" | gpg --clearsign
+  killall gpg-agent && gpg-agent --daemon
 fi
 
 # Update Oh-My-Zsh
