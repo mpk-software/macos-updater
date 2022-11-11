@@ -30,7 +30,7 @@ fi
 
 # Update python packages
 if command_exists pip3; then
-  pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
+  pip3 list --outdated --format=json | jq -r '.[] | "\(.name)==\(.latest_version)"' | xargs -n1 pip3 install -U
 fi
 
 # Update macOS
