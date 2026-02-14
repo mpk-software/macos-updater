@@ -6,7 +6,6 @@ A shell script for updating macOS and some web development tools (npm, pip, ...)
 - [brew](https://github.com/Homebrew/brew) and [brew cask](https://github.com/Homebrew/homebrew-cask)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [npm](https://github.com/npm/npm) (NodeJS Package Manager)
-- [pip3](https://github.com/pypa/pip) (Python Package Installer)
 
 ## Installation
 Clone the repository:

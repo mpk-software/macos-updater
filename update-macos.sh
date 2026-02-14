@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e
 
 function command_exists {
   type "$1" &> /dev/null
@@ -26,11 +28,6 @@ fi
 # Update global npm packages
 if command_exists npm; then
   npm update -g -f
-fi
-
-# Update python packages
-if command_exists pip3; then
-  pip3 list --outdated --format=json | jq -r '.[] | "\(.name)==\(.latest_version)"' | xargs -n1 pip3 install -U
 fi
 
 # Update macOS
