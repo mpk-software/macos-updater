@@ -8,6 +8,7 @@ function command_exists {
 
 # Update brew and its casks
 if command_exists brew; then
+  export HOMEBREW_NO_ASK=1
   brew update
   brew upgrade --greedy
   brew upgrade --cask --greedy
